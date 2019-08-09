@@ -1,33 +1,20 @@
 import React, { Component } from 'react';
 
 class Gif extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
-    this.state = { clicked: false };
   }
 
-  handleClick = (event) => {
-    console.log(event.target.value);
-    // this.setState({ clicked: !this.state.clicked });
+  handleClick = (e) => {
+    this.props.findGif(e.target.id);
   }
 
-  toogleClasses() {
-
-    let classes = 'gif';
-    if (this.state.clicked) {
-      classes += ' selected';
-    }
-    return classes;
-  }
-
-  render() {
-    const src = `https://i.giphy.com/media/${this.props.id}/200.gif`;
+  render () {
+    const src = `https://media1.giphy.com/media/${this.props.id}/giphy.gif`;
     return (
-      <img src={src} className='gif' onClick={this.toogleClasses} />
+      <img id={this.props.id} src={src} onClick={this.handleClick} />
     );
   }
 }
 
 export default Gif;
-
-// {this.classNames()} onClick={this.handleclick()}

@@ -10,33 +10,39 @@ body {
   justify-content: center;
 }
 
-.gif-display {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  width: 60%;
-  // flex: 0 0 60%;
+.left-side {
   height: 100%;
-  background-color: #BBB;
-  .form-search {
-    width: 80%;
-    height: 50px;
-    border : 1px solid #DDD;
-    background-color: #EEE;
+  width: 60%;
+  background-color: #CCC;
+  .search-bar {
+    height: 10%;
+    width: 100%;
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .display-gif {
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    img {
+      height: 200px;
+      max-width: 300px;
+    }
   }
 }
 
-.gif-list {
-  width: 40%;
-  // flex: 0 0 40%;
+.right-side {
   height: 100%;
-  background-color: lightgrey;
-  column-count: 2;
-
-  .gif {
-    width: 120px;
-    max-width: 100%;
+  width: 40%;
+  background-color: #DDD;
+  overflow: scroll;
+  img {
+    width: 150px;
+    height: 150px;
     margin: 5px;
     &:hover {
       cursor: pointer;
@@ -44,4 +50,5 @@ body {
     }
   }
 }
+
 

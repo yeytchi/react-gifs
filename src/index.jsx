@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 
 import '../assets/stylesheets/application.scss';
 import App from './components/app';
-import SearchBar from './components/search.jsx';
-import Gif from './components/gif.jsx'
+// Import other JS files here
 
 const root = document.getElementById('root');
 if (root) {
